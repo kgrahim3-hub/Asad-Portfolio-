@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asad — Bio Science</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap');
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #000000;
+            color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .reveal {
+            animation: reveal 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        }
+
+        @keyframes reveal {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-glass {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #a1a1a1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hover-line {
+            position: relative;
+        }
+
+        .hover-line::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #ffffff;
+            transition: width 0.4s ease;
+        }
+
+        .hover-line:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="selection:bg-white selection:text-black">
+
+    <nav class="fixed w-full top-0 z-50 nav-glass py-6 px-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <span class="text-xs font-bold tracking-[0.5em] uppercase">ASAD</span>
+            <div class="hidden md:flex space-x-12 text-[10px] font-medium tracking-[0.3em] uppercase opacity-60">
+                <a href="#about" class="hover:opacity-100 transition">About</a>
+                <a href="#focus" class="hover:opacity-100 transition">Focus</a>
+                <a href="#contact" class="hover:opacity-100 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="h-screen flex items-center px-8">
+        <div class="max-w-5xl mx-auto reveal">
+            <p class="text-[10px] tracking-[0.6em] uppercase text-zinc-500 mb-6 font-semibold">JMI Graduate </p>
+            <h1 class="text-6xl md:text-[7rem] font-extralight tracking-tighter leading-[1] mb-12">
+                Bio Science <br> 
+                <span class="text-gradient">Professional.</span>
+            </h1>
+            <div class="h-[1px] w-16 bg-zinc-800 mb-12"></div>
+            <p class="max-w-xl text-zinc-400 leading-relaxed text-sm md:text-base font-light">
+                Bridging the gap between biological theory and clinical application. 
+                Dedicated to a future in medicine characterized by precision and empathy.
+            </p>
+        </div>
+    </section>
+
+    <div class="px-8 max-w-7xl mx-auto">
+        <div class="h-[1px] w-full bg-zinc-900"></div>
+    </div>
+
+    <section id="focus" class="py-32 px-8">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16">
+            
+            <div class="space-y-4">
+                <span class="text-[9px] tracking-widest uppercase text-zinc-600 font-bold">Academic</span>
+                <h3 class="text-lg font-normal">Jamia Millia Islamia</h3>
+                <p class="text-sm text-zinc-500 leading-relaxed font-light">
+                    Graduated from JMI with a focus on Bio-Science. Developed a strong foundation in laboratory research and human anatomy.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <span class="text-[9px] tracking-widest uppercase text-zinc-600 font-bold">Direction</span>
+                <h3 class="text-lg font-normal">Medical Aspirant</h3>
+                <p class="text-sm text-zinc-500 leading-relaxed font-light">
+                    Currently pursuing advanced clinical knowledge to transition into a career as a healthcare professional.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <span class="text-[9px] tracking-widest uppercase text-zinc-600 font-bold">Philosophy</span>
+                <h3 class="text-lg font-normal">Modern Care</h3>
+                <p class="text-sm text-zinc-500 leading-relaxed font-light">
+                    Committed to a practice that utilizes the latest biological advancements to improve patient outcomes.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="py-48 px-8 text-center bg-zinc-950">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-[10px] tracking-[0.5em] uppercase text-zinc-600 mb-12">Available for collaborations</p>
+            <a href="mailto:asad@jmi.ac.in" class="text-4xl md:text-7xl font-extralight tracking-tight text-gradient hover:opacity-70 transition duration-700">
+                @asad
+            </a>
+            <div class="mt-24 flex justify-center space-x-10 text-[10px] tracking-[0.3em] uppercase font-semibold text-zinc-500">
+                <a href="#" class="hover-line text-white">LinkedIn</a>
+                <a href="#" class="hover-line text-white">Instagram</a>
+                <a href="#" class="hover-line text-white">Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-8 border-t border-zinc-900 bg-black">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-[9px] tracking-[0.4em] uppercase text-zinc-700 font-bold">
+            <span>&copy; 2026 Asad</span>
+            <span>JMI Alumnus • New Delhi</span>
+        </div>
+    </footer>
+
+</body>
+</html>
